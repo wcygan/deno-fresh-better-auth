@@ -20,7 +20,11 @@
     "**/_fresh/*"
   ],
   "imports": {
+    "@types/pg": "npm:@types/pg@^8.15.5",
+    "drizzle-kit": "npm:drizzle-kit@^0.31.4",
+    "drizzle-orm": "npm:drizzle-orm@^0.44.5",
     "fresh": "jsr:@fresh/core@^2.0.2",
+    "pg": "npm:pg@^8.16.3",
     "preact": "npm:preact@^10.27.1",
     "@preact/signals": "npm:@preact/signals@^2.3.1",
     "@fresh/plugin-vite": "jsr:@fresh/plugin-vite@^1.0.2",

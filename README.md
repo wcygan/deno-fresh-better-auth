@@ -7,11 +7,11 @@ deno install
 # Generate the types from the database schema
 deno run -A npm:@better-auth/cli@latest generate --output db/auth-schema.ts --yes
 
-# TBD: Generate the migrations
-deno --env -A --node-modules-dir npm:drizzle-kit generate --name=init
+# Generate the migrations
+deno run -A --env-file --node-modules-dir npm:drizzle-kit generate --name=init
 
 # TBD: Run the migrations
-deno --env -A --node-modules-dir npm:drizzle-kit migrate
+deno run -A --env-file --node-modules-dir npm:drizzle-kit migrate
 
 # TBD: Run the Dev server
 deno task dev

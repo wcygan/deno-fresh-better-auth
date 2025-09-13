@@ -10,8 +10,12 @@ deno run -A npm:@better-auth/cli@latest generate --output db/auth-schema.ts --ye
 # Generate the migrations
 deno run -A --env-file --node-modules-dir npm:drizzle-kit generate --name=init
 
-# TBD: Run the migrations
+# Run the migrations
 deno run -A --env-file --node-modules-dir npm:drizzle-kit migrate
+
+# Confirm the tables are created
+docker compose exec db psql -U authuser -d authdb -c "\dt"
+docker compose exec db psql -U authuser -d authdb -c "\d user"
 
 # TBD: Run the Dev server
 deno task dev

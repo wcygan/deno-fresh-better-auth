@@ -1,6 +1,8 @@
 # Deno Fresh + Better Auth
 
 ```bash
+cp .env.example .env
+
 # Install the dependencies
 deno install
 

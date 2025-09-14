@@ -1,6 +1,5 @@
 // tests/auth_signin_test.ts
 import { expect } from "@std/expect";
-import { eq } from "drizzle-orm";
 import { withHarness } from "./helpers/harness.ts";
 import { uniqueEmail } from "./helpers/data.ts";
 import { cleanupUserByEmail } from "./helpers/db.ts";

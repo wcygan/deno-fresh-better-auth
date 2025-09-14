@@ -31,6 +31,7 @@
     "npm:@babel/preset-react@^7.27.1": "7.27.1_@babel+core@7.28.4",
     "npm:@better-auth/cli@latest": "1.3.9_@babel+core@7.28.4_prisma@5.22.0_@opentelemetry+api@1.9.0_@prisma+client@5.22.0__prisma@5.22.0_@types+better-sqlite3@7.6.13_@types+pg@8.15.5_better-sqlite3@12.2.0_pg@8.16.3",
     "npm:@mjackson/node-fetch-server@0.7": "0.7.0",
+    "npm:@nanostores/preact@1": "1.0.0_nanostores@0.11.4_preact@10.27.1",
     "npm:@opentelemetry/api@^1.9.0": "1.9.0",
     "npm:@preact/signals@^2.2.1": "2.3.1_preact@10.27.1",
     "npm:@preact/signals@^2.3.1": "2.3.1_preact@10.27.1",
@@ -975,6 +976,13 @@
       "dependencies": [
         "chevrotain",
         "lilconfig"
+      ]
+    },
+    "@nanostores/preact@1.0.0_nanostores@0.11.4_preact@10.27.1": {
+      "integrity": "sha512-woHYvSwau1YtO9AEnGsh/jRPU2u5DTfNSrDHtKMZOeDUWV6EJfvyv7dJ7AaMps2I9uJcY6OlqXKkA9qTctEjyw==",
+      "dependencies": [
+        "nanostores",
+        "preact"
       ]
     },
     "@napi-rs/wasm-runtime@0.2.12": {
@@ -2460,6 +2468,7 @@
       "jsr:@fresh/core@^2.0.2",
       "jsr:@fresh/plugin-vite@^1.0.2",
       "jsr:@std/expect@^1.0.17",
+      "npm:@nanostores/preact@1",
       "npm:@preact/signals@^2.3.1",
       "npm:@tailwindcss/vite@^4.1.12",
       "npm:@types/pg@^8.15.5",

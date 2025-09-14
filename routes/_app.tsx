@@ -1,4 +1,5 @@
 import { define } from "../utils.ts";
+import NavBar from "../islands/NavBar.tsx";
 
 export default define.page(function App({ Component }) {
   return (
@@ -9,6 +10,7 @@ export default define.page(function App({ Component }) {
         <title>deno-fresh-better-auth</title>
       </head>
       <body>
+        <NavBar />
         <Component />
       </body>
     </html>

@@ -6,7 +6,8 @@
     "build": "vite build",
     "start": "deno serve -A _fresh/server.js",
     "update": "deno run -A -r jsr:@fresh/update .",
-    "db": "docker compose up -d"
+    "db": "docker compose up -d",
+    "test": "deno test --allow-env --env --env-file=.env --allow-net=127.0.0.1,localhost --trace-leaks"
   },
   "lint": {
     "rules": {

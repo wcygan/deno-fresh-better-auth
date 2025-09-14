@@ -12,4 +12,9 @@ export const auth = betterAuth({
     enabled: true,
     minPasswordLength: 8,
   },
+  trustedOrigins: [
+    "http://local.test",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+  ],
 });

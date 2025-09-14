@@ -12,6 +12,11 @@ export const auth = betterAuth({
     enabled: true,
     minPasswordLength: 8,
   },
+  rateLimit: {
+    enabled: true, // enable it in dev
+    window: 10, // time window in seconds
+    max: 100, // max requests in the window
+  },
   trustedOrigins: [
     "http://local.test",
     "http://localhost:5173",

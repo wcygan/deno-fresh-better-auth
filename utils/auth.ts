@@ -13,6 +13,10 @@ export const auth = betterAuth({
       clientId: Deno.env.get("GITHUB_CLIENT_ID")!,
       clientSecret: Deno.env.get("GITHUB_CLIENT_SECRET")!,
     },
+    google: {
+      clientId: Deno.env.get("GOOGLE_CLIENT_ID")!,
+      clientSecret: Deno.env.get("GOOGLE_CLIENT_SECRET")!,
+    },
   },
   emailAndPassword: {
     enabled: true,

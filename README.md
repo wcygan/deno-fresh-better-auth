@@ -48,6 +48,13 @@ GITHUB_CLIENT_ID=123
 GITHUB_CLIENT_SECRET=123
 ```
 
+Google <https://www.better-auth.com/docs/authentication/google>
+
+```bash
+GOOGLE_CLIENT_ID=123
+GOOGLE_CLIENT_SECRET=123
+```
+
 ## References
 
 1. <https://deno.com/blog/build-database-app-drizzle>

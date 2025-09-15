@@ -7,8 +7,10 @@ Use [Fresh](https://fresh.deno.dev/) with [Better Auth](https://www.better-auth.
 ## Quickstart
 
 ```bash
+# Create env file
 cp .env.example .env
 
+# Start the database
 docker compose up -d
 
 # Install the dependencies
@@ -46,7 +48,6 @@ Google <https://www.better-auth.com/docs/authentication/google>
 GOOGLE_CLIENT_ID=123
 GOOGLE_CLIENT_SECRET=123
 ```
-
 
 ## Rate Limiting
 

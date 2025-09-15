@@ -1,5 +1,11 @@
 # Deno Fresh + Better Auth
 
+Use [Fresh](https://fresh.deno.dev/) with [Better Auth](https://www.better-auth.com/) and [Drizzle ORM](https://orm.drizzle.team/) to create a web application with authentication:
+
+![Application preview](static/example.png)
+
+## Quickstart
+
 ```bash
 cp .env.example .env
 
@@ -23,22 +29,6 @@ docker compose exec db psql -U authuser -d authdb -c "\d user"
 deno task dev
 ```
 
-## Rate Limiting
-
-According to Better Auth [docs](https://www.better-auth.com/docs/concepts/rate-limit), sign in is limited to 3 requests within 10 seconds.
-
-We can test this with a script:
-
-```bash
-./scripts/test-rate-limit.sh
-Signup HTTP 422
-
-Attempt 1: 401 (Retry-After: -)
-Attempt 2: 401 (Retry-After: -)
-Attempt 3: 401 (Retry-After: -)
-Attempt 4: 429 (Retry-After: 9)
-```
-
 ## Social Login
 
 Github: <https://www.better-auth.com/docs/authentication/github>
@@ -53,6 +43,23 @@ Google <https://www.better-auth.com/docs/authentication/google>
 ```bash
 GOOGLE_CLIENT_ID=123
 GOOGLE_CLIENT_SECRET=123
+```
+
+
+## Rate Limiting
+
+According to Better Auth [docs](https://www.better-auth.com/docs/concepts/rate-limit), sign in is limited to 3 requests within 10 seconds.
+
+We can test this with a script:
+
+```bash
+./scripts/test-rate-limit.sh
+Signup HTTP 422
+
+Attempt 1: 401 (Retry-After: -)
+Attempt 2: 401 (Retry-After: -)
+Attempt 3: 401 (Retry-After: -)
+Attempt 4: 429 (Retry-After: 9)
 ```
 
 ## References

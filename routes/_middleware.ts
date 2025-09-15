@@ -22,7 +22,15 @@ export default define.middleware(async (ctx) => {
     path === p || path.startsWith(p + "/")
   );
 
-  // 2) If not authenticated and not public, send to /login
+  // 2) If authenticated already, /login should be inaccessible
+  if (ctx.state.session && (path === "/login" || path.startsWith("/login/"))) {
+    // WHY: Avoid login page flash and loops; honor ?next if present.
+    const url = new URL(ctx.url);
+    const next = url.searchParams.get("next");
+    return ctx.redirect(next || "/");
+  }
+
+  // 3) If not authenticated and not public, send to /login
   if (!ctx.state.session && !isPublic) {
     // If it's an API/fetch request, return 401 JSON instead of redirecting
     const isApi = path.startsWith("/api/");
@@ -38,6 +46,6 @@ export default define.middleware(async (ctx) => {
     return ctx.redirect(`/login?next=${next}`);
   }
 
-  // 3) Continue to the next middleware/route
+  // 4) Continue to the next middleware/route
   return ctx.next();
 });

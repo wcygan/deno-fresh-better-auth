@@ -39,6 +39,15 @@ Attempt 3: 401 (Retry-After: -)
 Attempt 4: 429 (Retry-After: 9)
 ```
 
+## Social Login
+
+Github: <https://www.better-auth.com/docs/authentication/github>
+
+```bash
+GITHUB_CLIENT_ID=123
+GITHUB_CLIENT_SECRET=123
+```
+
 ## References
 
 1. <https://deno.com/blog/build-database-app-drizzle>

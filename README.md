@@ -9,6 +9,8 @@ Use [Fresh](https://fresh.deno.dev/) with [Better Auth](https://www.better-auth.
 ```bash
 cp .env.example .env
 
+docker compose up -d
+
 # Install the dependencies
 deno install
 

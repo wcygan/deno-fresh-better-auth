@@ -1,3 +1,4 @@
+@import "basecoat-css";
 @import "tailwindcss";
 .fresh-gradient {
   background-color: rgb(134, 239, 172);

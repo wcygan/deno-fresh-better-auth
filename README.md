@@ -14,7 +14,7 @@ cp .env.example .env
 docker compose up -d
 
 # Install the dependencies
-deno install
+deno install -r --allow-scripts
 
 # Generate the types from the database schema
 deno run -A npm:@better-auth/cli@latest generate --output db/auth-schema.ts --yes
